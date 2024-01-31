@@ -3,12 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root";
+import ErrorPage from "./errorPage";
 
 // todo: create router
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
