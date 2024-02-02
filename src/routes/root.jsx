@@ -12,7 +12,7 @@ import { getContacts, createContact } from "../contacts";
 export default function Root() {
   const { contacts } = useLoaderData();
   console.log(contacts);
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   return (
     <>
       <div id="sidebar">
@@ -63,7 +63,10 @@ export default function Root() {
           )}
         </nav>
       </div>
-      <div id="detail" className={navigation.state === "loading" ? "loading": ""}>
+      <div
+        id="detail"
+        className={navigation.state === "loading" ? "loading" : ""}
+      >
         <Outlet />
       </div>
     </>
